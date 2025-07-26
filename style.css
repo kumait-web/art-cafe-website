@@ -86,3 +86,119 @@ nav ul li a {
     padding: 50px 5%;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+/* =================================================================
+   MENU PAGE STYLES
+   ================================================================= */
+
+/* --- تنسيق عنوان الصفحة --- */
+.page-header {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #111; /* لون أغمق قليلاً للتمييز */
+}
+
+.page-header h1 {
+    font-size: 5rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+/* --- تنسيق أقسام القائمة --- */
+.menu-category {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.menu-category h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* خط تزييني تحت عنوان القسم */
+.menu-category h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+/* --- تنسيق شبكة القائمة --- */
+.menu-grid {
+    display: grid;
+    /* هذا السطر السحري يجعل الشبكة متجاوبة تلقائياً */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+/* --- تنسيق بطاقة العنصر الواحد --- */
+.menu-item {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden; /* لإخفاء أي زوائد من الصورة */
+    display: flex; /* لاستخدام فليكس بوكس للعناصر الداخلية */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.menu-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* لضمان أن الصورة تملأ المساحة بشكل جميل */
+}
+
+.menu-item-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* لجعل هذا العنصر يأخذ المساحة المتبقية */
+}
+
+.menu-item-name {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-description {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.menu-item-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
